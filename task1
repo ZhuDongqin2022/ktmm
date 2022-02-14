@@ -1,0 +1,9 @@
+str=input()
+arr=[]
+count=0
+
+for x in str:
+    if x not in arr:
+        arr.append(x)
+        count+=1
+print(count)
