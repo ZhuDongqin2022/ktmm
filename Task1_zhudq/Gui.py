@@ -40,6 +40,9 @@ def Tem(t,v):
 def Time(v):
     T = Task1.T_total
     v.set(float(T))
+    
+def Run():
+    Task1.run()    
 
 Tem_max, Tem_min = Task1.faces_points()
 Button(myWindow, text="Вариант", width=15, fg="blue", command=lambda:text('Вариант4(model2)', v1)).grid(row=0, column=0, sticky=W, padx=10, pady=5)
@@ -48,6 +51,7 @@ Button(myWindow, text="Температур", width=15, fg="blue", command=lambd
 Button(myWindow, text="T_max", width=15, fg="blue", command=lambda:Tem(Tem_max, v4)).grid(row=3, column=0, sticky=W, padx=10, pady=5)
 Button(myWindow, text="T_min", width=15, fg="blue", command=lambda:Tem(Tem_min, v5)).grid(row=4, column=0, sticky=W, padx=10, pady=5)
 Button(myWindow, text="Общее время", width=15, fg="blue", command=lambda:Time(v6)).grid(row=5, column=0, sticky=W, padx=10, pady=5)
+Button(myWindow, text="3DГрафик", width=15, fg="blue", command=Run).grid(row=6, column=0, sticky=W, padx=10, pady=5)
 
 myWindow.mainloop()
 
